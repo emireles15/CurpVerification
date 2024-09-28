@@ -109,7 +109,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="3383.2,1764" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1156,1004.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="CurpsDt" />
     </Sequence.Variables>
@@ -118,27 +118,27 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[CurpsDt]" DisplayName="Read Range Workbook - Curps" sap:VirtualizedContainerService.HintSize="3383.2,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\PruebasCurps.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CurpsDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="3383.2,1481.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[CurpsDt]" DisplayName="Read Range Workbook - Curps" sap:VirtualizedContainerService.HintSize="516.8,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\PruebasCurps.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[CurpsDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="516.8,722.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="3349.6,1284" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483.2,524.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CURP | Trámites | gob.mx" sap:VirtualizedContainerService.HintSize="3316,1224" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: CURP | Trámites | gob.mx" sap:VirtualizedContainerService.HintSize="449.6,464.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3282.4,984" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,224.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="webCurp" />
                       <Variable x:TypeArguments="x:Boolean" Name="CurpExists" />
@@ -149,7 +149,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Clave Única de Registro…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="3248.8,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Text="[CurrentRow(&quot;CURP&quot;).ToString]" Version="V4">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Clave Única de Registro…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Text="[CurrentRow(&quot;CURP&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.gob.mx/curp/" CVScreenId="6bf8c043-2843-4a46-ac79-11a63535732a" DesignTimeRectangle="298, 763, 836, 48" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='curpinput' tag='INPUT' /&gt;" Guid="bd2e3895-d156-4aa6-ab4c-4eed170fdea2" InformativeScreenshot="72d09799b68ac235148ccb924febfa7e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CURP | Trámites | gob.mx' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -176,7 +176,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="3248.8,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buscar'" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e9c97ac-8e5c-41f4-b535-bca0b688bb47" Version="V4">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.gob.mx/curp/" CVScreenId="146890a5-8d32-449d-85ad-b2786972a461" DesignTimeRectangle="1489, 615, 183, 61" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='searchButton' tag='BUTTON' /&gt;" Guid="7baf64ed-25c3-46f3-9b89-1b24d1df1b5b" InformativeScreenshot="7382765b8ec59f92e2c0fea943dc5da9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='CURP | Trámites | gob.mx' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                       </uix:NClick.Target>
@@ -197,14 +197,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <Pick sap:VirtualizedContainerService.HintSize="3248.8,808.8" sap2010:WorkflowViewState.IdRef="Pick_1">
+                    <Pick sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="Pick_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_3">
+                      <PickBranch DisplayName="PickBranch - Difunto" sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_3">
                         <PickBranch.Trigger>
                           <Sequence sap:VirtualizedContainerService.HintSize="416,109.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
@@ -265,7 +265,7 @@
                           </Assign.Value>
                         </Assign>
                       </PickBranch>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                      <PickBranch DisplayName="PickBranch - Activo" sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_1">
                         <PickBranch.Trigger>
                           <Sequence sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <sap:WorkflowViewStateService.ViewState>
@@ -328,7 +328,7 @@
                           </Assign.Value>
                         </Assign>
                       </PickBranch>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="556.8,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                      <PickBranch DisplayName="PickBranch - Datos incorrectos" sap:VirtualizedContainerService.HintSize="556.8,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_2">
                         <PickBranch.Trigger>
                           <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV' - Datos ingresados no correctos" sap:VirtualizedContainerService.HintSize="337.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                             <ui:UiElementExists.Target>
@@ -375,7 +375,7 @@
                           </uix:NClick>
                         </Sequence>
                       </PickBranch>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="505.6,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_5">
+                      <PickBranch DisplayName="PickBranch - Pagina fuera de servicio" sap:VirtualizedContainerService.HintSize="505.6,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_5">
                         <PickBranch.Trigger>
                           <Sequence sap:VirtualizedContainerService.HintSize="416,250.4" sap2010:WorkflowViewState.IdRef="Sequence_14">
                             <sap:WorkflowViewStateService.ViewState>
@@ -422,7 +422,7 @@
                           <ui:Break sap:VirtualizedContainerService.HintSize="382.4,49.6" sap2010:WorkflowViewState.IdRef="Break_1" />
                         </Sequence>
                       </PickBranch>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_6">
+                      <PickBranch DisplayName="PickBranch - Formato invalido de CURP" sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_6">
                         <PickBranch.Trigger>
                           <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV' - Campo Invalido" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
                             <ui:UiElementExists.Target>
@@ -446,7 +446,7 @@
                           </Assign.Value>
                         </Assign>
                       </PickBranch>
-                      <PickBranch sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_4">
+                      <PickBranch DisplayName="PickBranch - Timeout" sap:VirtualizedContainerService.HintSize="523.2,737.6" sap2010:WorkflowViewState.IdRef="PickBranch_4">
                         <PickBranch.Trigger>
                           <Delay Duration="00:00:23" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
                         </PickBranch.Trigger>
